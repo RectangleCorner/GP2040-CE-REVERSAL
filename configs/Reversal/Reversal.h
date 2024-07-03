@@ -10,11 +10,11 @@
 // -----------------------------------------------------
 
 
-#ifndef _BOARDS_FLATBOXREV4_H
-#define _BOARDS_FLATBOXREV4_H
+#ifndef _BOARDS_REVERSAL_H
+#define _BOARDS_REVERSAL_H
 
 // For board detection
-#define FLATBOXREV4
+#define REVERSAL
 
 //For crappy crystal
 #ifndef PICO_XOSC_STARTUP_DELAY_MULTIPLIER

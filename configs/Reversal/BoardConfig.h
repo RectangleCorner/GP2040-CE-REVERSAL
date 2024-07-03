@@ -3,16 +3,16 @@
  * SPDX-FileCopyrightText: Copyright (c) 2024 OpenStickCommunity (gp2040-ce.info)
  */
 
-#ifndef FLATBOX_REV4_CONFIG_H_
-#define FLATBOX_REV4_CONFIG_H_
+#ifndef REVERSAL_CONFIG_H_
+#define REVERSAL_CONFIG_H_
 
 #include "enums.pb.h"
 #include "class/hid/hid.h"
 
-#define BOARD_CONFIG_LABEL "Flatbox Rev. 4"
+#define BOARD_CONFIG_LABEL "Reversal"
 
 // Main pin mapping Configuration
-// Mapping between Flatbox Rev4 switch number (as silkscreened) and GPIO pin listed under "Flatbox Rev4 SW#"
+// Mapping between Reversal switch number (as silkscreened) and GPIO pin listed under "Flatbox Rev4 SW#"
 //                                                  // Flatbox Rev4 SW# | GP2040 | Xinput | Switch  | PS3/4/5  | Dinput | Arcade |
 #define GPIO_PIN_16 GpioAction::BUTTON_PRESS_UP     // UP     | UP     | UP      | UP       | UP     | UP     |
 #define GPIO_PIN_10 GpioAction::BUTTON_PRESS_DOWN   // DOWN   | DOWN   | DOWN    | DOWN     | DOWN   | DOWN   |
@@ -53,6 +53,9 @@
 #define KEY_BUTTON_R3   HID_KEY_MINUS         // R3     | RS     | RS      | R3       | 12     | RS     |
 #define KEY_BUTTON_A1   HID_KEY_9             // A1     | Guide  | Home    | PS       | 13     | ~      |
 #define KEY_BUTTON_A2   HID_KEY_F2            // A2     | ~      | Capture | ~        | 14     | ~      |
-#define KEY_BUTTON_FN   -1                    // Hotkey Function                                        |
+#define KEY_BUTTON_FN   GPIO_PIN_12                    // Hotkey Function     
+
+#define USB_PERIPHERAL_ENABLED 1
+#define USB_PERIPHERAL_PIN_DPLUS 21                                   
 
 #endif
